@@ -25,6 +25,7 @@ class ApplicationController < Sinatra::Base
   
   patch '/recipes/:id' do
     
+    redirect to "/recipes/#{@recipe.id}"
   end
   
   post '/recipes' do
