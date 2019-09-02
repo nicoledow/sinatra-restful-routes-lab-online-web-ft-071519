@@ -27,6 +27,7 @@ class ApplicationController < Sinatra::Base
     @recipe = Recipe.find_by_id(params["id"])
     @recipe.name = params["name"]
     @recipe.ingredients = params["ingredients"]
+    @recipe.cook_time = params["cook_time"]
     
     redirect to "/recipes/#{@recipe.id}"
   end
